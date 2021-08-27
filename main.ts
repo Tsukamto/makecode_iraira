@@ -11,23 +11,21 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onPinPressed(TouchPin.P2, function () {
     if (start >= 1) {
-        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.OnceInBackground)
-        basic.showString("CLEAR")
+        basic.showIcon(IconNames.Happy)
+        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Once)
     }
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     start = 0
+    music.stopAllSounds()
 })
 input.onPinPressed(TouchPin.P1, function () {
     if (start >= 1) {
-        music.startMelody(music.builtInMelody(Melodies.Punchline), MelodyOptions.OnceInBackground)
         basic.showIcon(IconNames.No)
+        music.startMelody(music.builtInMelody(Melodies.Punchline), MelodyOptions.Once)
     }
 })
 let start = 0
 basic.clearScreen()
 start = 0
-basic.forever(function () {
-	
-})
