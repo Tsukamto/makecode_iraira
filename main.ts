@@ -1,4 +1,3 @@
-let start = 0
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(3)
     basic.pause(1000)
@@ -26,6 +25,9 @@ input.onPinPressed(TouchPin.P1, function () {
         basic.showIcon(IconNames.No)
     }
 })
+let start = 0
+basic.clearScreen()
+start = 0
 basic.forever(function () {
 	
 })
